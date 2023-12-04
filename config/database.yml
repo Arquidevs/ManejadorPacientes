@@ -5,3 +5,7 @@ default: &default
   username: rasi-db
   password: rasi2023
   host: 10.110.16.3
+
+development:
+  <<: *default
+  database: pacientes-db
