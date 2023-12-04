@@ -12,10 +12,9 @@ puts Dir.pwd
 # Define el método de importación
 def importar_pacientes
   # Obtén la ruta completa del archivo JSON en relación con el directorio del script
-  json_file_path = File.expand_path('pacientes.json', __dir__)
 
   # Lee el contenido del archivo JSON
-  json_data = File.read(json_file_path)
+  json_data = File.read('pacientes.json')
 
   # Analiza el JSON
   pacientes = JSON.parse(json_data)
