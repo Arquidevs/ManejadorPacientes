@@ -7,6 +7,9 @@ require File.expand_path('../config/environment', __dir__)
 # Importa el modelo Paciente
 require_relative '../app/models/Paciente' # Asegúrate de ajustar la ruta correcta
 
+puts Dir.pwd
+
+
 # Define el método de importación
 def importar_pacientes
   # Obtén la ruta completa del archivo JSON en relación con el directorio del script
