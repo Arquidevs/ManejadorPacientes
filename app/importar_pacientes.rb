@@ -17,8 +17,7 @@ def importar_pacientes
 # pacientes_json = File.read('app/pacientes.json')
 
 # Después
-  json_data = File.read(File.expand_path('pacientes.json', __dir__))
-
+  json_data = File.read('ManejadorPacientes/pacientes.json')
 
 
   # Analiza el JSON
