@@ -7,5 +7,7 @@ class CreateContratos < ActiveRecord::Migration[7.1]
 
       t.timestamps
     end
+
+    execute 'ALTER TABLE contratos ADD PRIMARY KEY (id);'
   end
 end

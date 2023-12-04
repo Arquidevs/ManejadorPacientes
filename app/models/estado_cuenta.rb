@@ -1,0 +1,2 @@
+class EstadoCuenta < ApplicationRecord
+end
