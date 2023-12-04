@@ -23,7 +23,7 @@ def importar_contratos
   contratos.each do |contratos_data|
     contrato = Contrato.new(contratos_data)
 
-    if paciente.save
+    if contrato.save
       puts "Contrato creado: #{contrato.id}"
     else
       puts "Error al crear el contrato #{contrato.id}: #{contrato.errors.full_messages.join(', ')}"
