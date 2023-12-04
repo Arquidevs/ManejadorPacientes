@@ -9,23 +9,26 @@ require_relative '../app/models/Paciente' # Asegúrate de ajustar la ruta correc
 
 puts Dir.pwd
 
-
 # Define el método de importación
 def importar_pacientes
+  # Obtén la ruta completa del archivo JSON en relación con el directorio del script
+  json_file_path = File.expand_path('pacientes.json', __dir__)
 
-    # Antes
-# pacientes_json = File.read('app/pacientes.json')
-
-# Después
-  json_data = File.read('pacientes.json')
-
+  # Lee el contenido del archivo JSON
+  json_data = File.read(json_file_path)
 
   # Analiza el JSON
   pacientes = JSON.parse(json_data)
 
   # Itera sobre cada paciente y créalo en la base de datos
   pacientes.each do |paciente_data|
-    Paciente.create(paciente_data)
+    paciente = Paciente.new(paciente_data)
+
+    if paciente.save
+      puts "Paciente creado: #{paciente.nombre}"
+    else
+      puts "Error al crear el paciente #{paciente.nombre}: #{paciente.errors.full_messages.join(', ')}"
+    end
   end
 
   puts 'Importación de pacientes completada.'
