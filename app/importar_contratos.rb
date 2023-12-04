@@ -21,7 +21,7 @@ def importar_contratos
 
   # Itera sobre cada paciente y créalo en la base de datos
   contratos.each do |contratos_data|
-    contrato = Contrato.new(contrato_data)
+    contrato = Contrato.new(contratos_data)
 
     if paciente.save
       puts "Contrato creado: #{contrato.id}"
