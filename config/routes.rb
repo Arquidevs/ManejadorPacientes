@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   get '/pacientes/:id', to: 'pacientes#buscar_paciente'
   get '/contratos/:id', to: 'contratos#buscar_contrato'
+  get '/estados_cuenta/:id', to: 'estados_cuenta#buscar_estado'
+
 
 
   # Defines the root path route ("/")
