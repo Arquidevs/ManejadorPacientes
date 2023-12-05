@@ -1,5 +1,4 @@
 class EstadosCuentaController < ApplicationController
-
     def buscar_estado
       @estado_cuenta = EstadoCuenta.where(paciente: params[:paciente])
   
@@ -7,13 +6,13 @@ class EstadosCuentaController < ApplicationController
         format.html { head :no_content }
         format.json do
           if @estado_cuenta.any?
-            render json: @estado_cuenta
+            # Solo incluir el atributo paciente en la respuesta JSON
+            render json: @estado_cuenta.map { |estado| { paciente: estado.paciente } }
           else
             render json: { error: 'Estados de cuenta no encontrados' }, status: :not_found
           end
         end
       end
     end
-  
   end
   
