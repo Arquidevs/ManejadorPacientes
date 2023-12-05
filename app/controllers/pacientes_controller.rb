@@ -1,12 +1,9 @@
-# app/controllers/pacientes_controller.rb
-
-class PacientesController < ApplicationController
+  # app/controllers/pacientes_controller.rb
+  class PacientesController < ApplicationController
+    # Otras acciones del controlador...
     def index
       @pacientes = Paciente.all
     end
-    # app/controllers/pacientes_controller.rb
-class PacientesController < ApplicationController
-    # Otras acciones del controlador...
   
     def buscar_paciente
       @paciente = Paciente.find_by(cedula: params[:cedula])
