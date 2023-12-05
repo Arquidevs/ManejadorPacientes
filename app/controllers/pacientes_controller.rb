@@ -6,7 +6,7 @@
     end
   
     def buscar_paciente
-      @paciente = Paciente.find_by(cedula: params[:cedula])
+      @paciente = Paciente.find_by(id: params[:id])
       respond_to do |format|
         format.html do
           # Lógica para manejar solicitudes HTML
