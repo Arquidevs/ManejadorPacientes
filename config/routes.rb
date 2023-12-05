@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     # config/routes.rb
   resources :pacientes, only: [:index]
 
+  get '/pacientes/:id', to: 'pacientes#buscar_paciente'
+
 
   # Defines the root path route ("/")
   # root "posts#index"

@@ -1,0 +1,2 @@
+class ContratosController < ApplicationController
+end

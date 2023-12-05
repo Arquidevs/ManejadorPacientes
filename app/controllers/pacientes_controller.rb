@@ -8,7 +8,7 @@ class PacientesController < ApplicationController
 class PacientesController < ApplicationController
     # Otras acciones del controlador...
   
-    def buscar_por_cedula
+    def buscar_paciente
       @paciente = Paciente.find_by(cedula: params[:cedula])
       respond_to do |format|
         format.html do
