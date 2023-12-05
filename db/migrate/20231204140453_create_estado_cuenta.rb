@@ -1,7 +1,7 @@
 class CreateEstadoCuenta < ActiveRecord::Migration[7.1]
   def change
     create_table :estado_cuenta, id:false do |t|
-      t.string :id
+      t.string :paciente
       t.string :servicio
       t.timestamps
     end
