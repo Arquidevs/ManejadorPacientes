@@ -11,9 +11,6 @@ Rails.application.routes.draw do
   get '/pacientes/:id', to: 'pacientes#buscar_paciente'
   get '/contratos/:id', to: 'contratos#buscar_contrato'
   get '/estado_cuenta/:paciente', to: 'estado_cuenta#buscar_estado'
-
-
-
   # Defines the root path route ("/")
   # root "posts#index"
 end
