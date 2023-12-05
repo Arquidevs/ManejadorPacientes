@@ -7,7 +7,7 @@ class EstadosCuentaController < ApplicationController
         format.json do
           if @estado_cuenta.any?
             # Solo incluir el atributo paciente en la respuesta JSON
-            render json: @estado_cuenta.map { |estado| { paciente: estado.paciente } }
+            render json: @estado_cuenta
           else
             render json: { error: 'Estados de cuenta no encontrados' }, status: :not_found
           end
