@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   get '/pacientes/:id', to: 'pacientes#buscar_paciente'
   get '/contratos/:id', to: 'contratos#buscar_contrato'
-  get '/estado_cuenta/:paciente', to: 'estados_cuenta#buscar_estado'
+  get '/estados_cuenta/:paciente', to: 'estados_cuenta#buscar_estado'
 
 
 
