@@ -6,7 +6,7 @@ class PacientesController < ApplicationController
   end
 
   def buscar_paciente
-    @paciente = Paciente.find_by(cedula: params[:cedula])
+    @paciente = Paciente.find_by(id: params[:id])
 
     if @paciente
       render json: @paciente
