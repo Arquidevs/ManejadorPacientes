@@ -1,7 +1,7 @@
 class EstadosCuentaController < ApplicationController
 
     def buscar_estado
-      @estados_cuenta = EstadoCuenta.where(paciente: params[:id])
+      @estados_cuenta = EstadoCuenta.where(paciente: params[:paciente])
   
       respond_to do |format|
         format.html { head :no_content }
