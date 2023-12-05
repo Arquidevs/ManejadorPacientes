@@ -21,7 +21,7 @@ def importar_estados
 
   # Itera sobre cada paciente y créalo en la base de datos
   estados.each do |estados_data|
-    estado = Estado_cuenta.new(estados_data)
+    estado = EstadoCuenta.new(estados_data)
 
     if estado.save
       puts "estado creado: #{estado.id}"
