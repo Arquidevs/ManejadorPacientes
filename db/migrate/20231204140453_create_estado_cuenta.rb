@@ -6,6 +6,6 @@ class CreateEstadoCuenta < ActiveRecord::Migration[7.1]
       t.timestamps
     end
 
-    execute 'ALTER TABLE estado_cuenta ADD PRIMARY KEY (id, servicio);'
+    execute 'ALTER TABLE estado_cuenta ADD PRIMARY KEY (paciente, servicio);'
   end
 end
