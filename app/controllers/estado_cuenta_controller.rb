@@ -1,4 +1,4 @@
-class EstadosCuentaController < ApplicationController
+class EstadoCuentaController < ApplicationController
     def buscar_estado
       @estado_cuenta = EstadoCuenta.where(paciente: params[:paciente])
   
