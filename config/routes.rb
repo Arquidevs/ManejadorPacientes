@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :pacientes, only: [:index]
 
   get '/pacientes/:id', to: 'pacientes#buscar_paciente'
+  get '/contratos/:id', to: 'contratos#buscar_contrato'
 
 
   # Defines the root path route ("/")
